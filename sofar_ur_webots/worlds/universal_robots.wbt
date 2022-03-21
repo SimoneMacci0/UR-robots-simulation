@@ -1,0 +1,106 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "Unviversal Robot UR3e, UR5e and UR10e grasping cans using Robotiq 3F grippers."
+  ]
+  title "Universal Robot"
+  basicTimeStep 16
+  physicsDisableAngularThreshold 0.1
+  contactProperties [
+    ContactProperties {
+      bounce 0.1
+    }
+    ContactProperties {
+      material1 "slope"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.21835961959972996 -0.017850780067166307 -0.9757050918075886 3.211923482200849
+  position 4.429446067131862 0.00593171735072362 2.338067084042337
+  exposure 1.7
+}
+TexturedBackground {
+  texture "factory"
+}
+Floor {
+  size 20 20
+  appearance ThreadMetalPlate {
+  }
+}
+UR5e {
+  translation 0 0 0.57
+  rotation 0 0 1 -1.570796267678159
+  name "UR5_1"
+  controller "<extern>"
+  supervisor TRUE
+  selfCollision FALSE
+  toolSlot [
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0.01
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+UR5e {
+  translation 2.09 1.21774e-07 0.57
+  rotation 0 0 1 1.57
+  name "UR5_2"
+  controller "<extern>"
+  supervisor TRUE
+  selfCollision FALSE
+  toolSlot [
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0.01
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+SolidBox {
+  translation 0 0 0.27
+  size 0.3 0.3 0.6
+  appearance GalvanizedMetal {
+    textureTransform TextureTransform {
+      scale 2 2
+    }
+  }
+}
+SolidBox {
+  translation 2.09 0 0.27
+  name "box2"
+  size 0.3 0.3 0.6
+  appearance GalvanizedMetal {
+    textureTransform TextureTransform {
+      scale 2 2
+    }
+  }
+}
+ConveyorBelt {
+  translation 1.08 -0.83 -0.05
+  name "conveyor1"
+  speed -0.25
+}
+ConveyorBelt {
+  translation 1.08 0.83 -0.05
+  name "conveyor2"
+  speed 0.25
+}
+SolidBox {
+  translation 1.5 -0.8 0.76
+  name "cube"
+  size 0.12 0.12 0.12
+  appearance PBRAppearance {
+    baseColor 0.929412 0.831373 0
+    roughness 0.5
+    metalness 0
+  }
+  physics Physics {
+  }
+}
