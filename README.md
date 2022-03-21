@@ -9,7 +9,7 @@ The two robots are endowed with a distance sensor (inspect the topic) on their h
 To move and control the arms, you will need to use the ur_joint_trajectory_controller/follow_joint_trajectory action, which is directly exposed by the webots_ros2 driver node of the simulation. Make sure to inspect the action interface.
 
 You will need to implement 4 different action requests:
-1) close_gripper(), which correspond to the configuration [0.4, 0.4, 0.4] for the joints ["finger_1_joint_1", "finger_2_joint_1", "finger_middle_joint_1"];
+1) close_gripper(), which correspond to the configuration [0.4, 0.4, 0.4] for the joints ["finger_1_joint_1", "finger_2_joint_1", "finger_middle_joint_1"]
 2) open_gripper(), which correspond to the configuration [0.05, 0.05, 0.05] for the joints ["finger_1_joint_1", "finger_2_joint_1", "finger_middle_joint_1"]
 3) move_arm(), which corresponds to the configuration [-0.45, -2.3, -1.1, -0.7071, 1.75] for the joints ["shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint", "wrist_1_joint", "wrist_2_joint"]
 4) move_arm_to_rest(), which corresponds to the configuration [0.0, 0.0, 0.0, 0.0, 0.0] for the joints ["shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint", "wrist_1_joint", "wrist_2_joint"]
