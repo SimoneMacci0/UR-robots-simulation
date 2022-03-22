@@ -1,5 +1,5 @@
 # UR-robots-simulation
-ROS2 package containing all the necessary files (launch, urdf and yaml files) to spawn a simple Webots simulation with two UR5 robots playing together. 
+ROS2 package containing all the necessary files (launch, urdf and yaml files) to spawn a simple Webots simulation with two UR5 robots playing catch together. 
 
 You only need to implement the control of the two arms, by modifying the content of the 
 ur_controller.py script.
